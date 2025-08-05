@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cashier - Mighty Water</title>
+
+  <link rel="stylesheet" href="cashier.css">
+
+  <script src="cashier.js"></script>
+</head>
+
+<body>
+
+  <!--CASHIER-->
+  <section id="cashier">
+    <main>
+      <header>
+        <div id="divHeader"><img id="logo" src="logo_with_name.png"></div>
+      </header>
+
+      <div id="txtBox">
+        <div id="btnRestart"><button id="restart" onclick="hideRestart();">Restart 🔄</button></div>
+        <textarea id="outputUpper" rows="1" readonly></textarea>
+        <textarea id="outputLower" rows="1" readonly></textarea>
+      </div>
+
+      <div id="divBtnNum">
+        <button id="btn1" name="1" onclick="numConcat(this.name);">1</button>
+        <button id="btn2" name="2" onclick="numConcat(this.name);">2</button>
+        <button id="btn3" name="3" onclick="numConcat(this.name);">3</button>
+
+        <button id="btn4" name="4" onclick="numConcat(this.name);">4</button>
+        <button id="btn5" name="5" onclick="numConcat(this.name);">5</button>
+        <button id="btn6" name="6" onclick="numConcat(this.name);">6</button>
+
+        <button id="btn7" name="7" onclick="numConcat(this.name);">7</button>
+        <button id="btn8" name="8" onclick="numConcat(this.name);">8</button>
+        <button id="btn9" name="9" onclick="numConcat(this.name);">9</button>
+
+        <button id="btn0" name="0" onclick="numConcat(this.name);">0</button>
+        <button id="btnDot" name="." onclick="numConcat(this.name);">.</button>
+
+        <button id="btnDel" onclick="del();">Del</button>
+
+        <div id="payMeth">
+          <header><label>PAYMENT METHODS</label></header>
+
+          <button id="CASH" name="Cash" disabled onclick="setPayMeth(this.name);">💸</button>
+          <button id="CHECK" name="Check" disabled onclick="setPayMeth(this.name);">CH</button>
+          <button id="CARD" name="Card" disabled onclick="setPayMeth(this.name);">💳</button>
+        </div>
+
+      </div>
+
+      <div id="prod">
+        <button id="btnIceTube" name="Ice Tube" onclick="currProd(this.name);">Ice Tube</button>
+        <button id="btnNewContainer" name="New Container" onclick="currProd(this.name);">New Container</button>
+
+        <button id="btnLiters" name="5-8 Liters" onclick="currProd(this.name);">5-8 Liters</button>
+        <button id="btnRound" name="Round Container" onclick="currProd(this.name);">Round</button>
+        <button id="btnSlim" name="Slim Container" onclick="currProd(this.name);">Slim Container</button>
+        <button id="btnMoneyIn" name="Money-In" onclick="currProd(this.name);">Money-In</button>
+        <button id="btnMoneyOut" name="Money-Out" onclick="currProd(this.name);">Money-Out</button>
+        <button id="btnVoid">Void</button>
+        <header>--------------------------------------------</header>
+        <div id="divEnter"><button id="btnEnter" disabled onclick="enter_CLick();">Enter</button></div>
+      </div>
+
+    </main>
+
+    <div class="div_Summary_Entry">
+      <div id="summary">
+        <table>
+          <tr>
+            <td id="col1"><label><b>TRANSACTIONS</b></label><br><br></td>
+          </tr>
+          <tr>
+            <td id="col1"> <label>Ice Tube...............</label></td>
+            <td><label id="lblIceTube">0.00</label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"><label>New Container w/<br>Refill Bundle..........</label></td>
+            <td><br><label id="lblNewContainer">0.00</label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"><label><b>Water Refill</b></label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"><label>5-8 Liters.............</label></td>
+            <td><label id="lblLiters">0.00</label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"> <label>Round Container.....</label></td>
+            <td><label id="lblRound">0.00</label></td>
+          </tr>
+          <tr>
+            <td id="col1"><label>Slim Container.......</label></td>
+            <td><label id="lblSlim">0.00</label></td>
+          </tr>
+          <tr>
+            <td id="col1"><label id="wordMoneyIn">Money-In..............</label></td>
+            <td><label id="lblMoney-In">0.00</label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"><label id="wordMoneyOut">Money-Out............</label></td>
+            <td><label id="lblMoney-Out">0.00</label></td>
+          </tr>
+          <tr>
+            <td id="col1"><br><label><b>PAYMENT METHODS</b></label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"> <label>Cash...................</label></td>
+            <td><label id="lblCash">0.00</label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"><label>Check.................</label></td>
+            <td><label id="lblCheck">0.00</label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"><label>Card...................</label></td>
+            <td><label id="lblCard">0.00</label></td>
+          </tr>
+          <tr>
+            <td id="col1"><br><label><b>GRAND TOTAL</b></label><br></td>
+          </tr>
+          <tr>
+            <td id="col1"><label id="wordTotal"><b>Total................₱</b> </label></td>
+            <td><label id="lblTotal">0.00</label></td>
+          </tr>
+        </table>
+      </div>
+
+      <div id="entries">
+        <label id="lblEntryWord">Entries</label>
+        <label id="lblEntry">(0)</label>
+        <!--another div will be created according to user number of entries-->
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

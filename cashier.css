@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*section cashier*/
+#cashier{
+    padding: 100px;
+    background-color: rgba(3, 83, 148, 0.61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*my Shop logo*/
+header #divHeader{
+    background-color: aquamarine;
+    border-radius: 10px;
+    width: 785px;
+    height: 80px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.925);
+    margin-bottom: 10px;
+}
+/*logo itself*/
+header #divHeader #logo{
+    width: 270px;
+    height: 70px;
+    margin-top: 5px;
+}
+/*nakalagay yung mga buttons*/
+main{
+    padding: 10px;
+}
+/*upper text area*/
+main #txtBox #outputUpper{
+    font-size: 70px;
+    border: none;
+    width: 785px;
+    border-radius: 5px;
+    resize: none;
+    color: rgb(51, 49, 49);
+}
+/*lower text area*/
+main #txtBox #outputLower{
+    font-size: 70px;
+    border: none;
+    width: 785px;
+    text-align: right;
+    resize: none;
+}
+/*container ng dalwang textarea and restart button*/
+main #txtBox{
+  background-color: white;
+  margin: 0px;
+  padding: 0px;
+  margin-bottom: 10px;
+  width: 785px;
+  border-radius: 5px;
+}
+/*remove the border and outline of text area whenever mouse click event*/
+textarea:focus{
+  outline: none;
+  border: none;
+}
+/*container of all buttons*/
+main #divBtnNum{
+    display: inline-block;
+    width: 470px;
+}
+main #prod{
+  display: inline-block;
+    width: 315px;
+}
+#prod button{
+  width: 148px;
+  height: 50px;
+  font-weight: bolder;
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-left: 5px;
+  border-radius: 20px;
+}
+/*all buttons*/
+main #divBtnNum button{
+    width: 148px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-left: 5px;
+    border-radius: 20px;
+}
+/*container for payment method buttons*/
+main #divBtnNum #payMeth{
+  display: inline-block;
+}
+/*for payment method label*/
+main #prod header{
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-align: center;
+}
+
+main #divBtnNum #payMeth header{
+  margin-bottom: 5px;
+  margin-top: 10px;
+  color: green;
+  font-weight: bold;
+  text-align: center;
+}
+
+/*container for enter button*/
+main #divBtnNum #divEnter{
+  display: inline-flex;
+}
+/*enter button*/
+main #divEnter button{
+  width: 305px;
+  background-color: light;
+}
+/*container for entries*/
+#entries{
+  background-color: rgb(156, 210, 253);
+  border-radius: 5px;
+  border: 5px solid blue;
+  width: 270px;
+  height: 280px;
+  padding: 4px;
+  overflow: auto;
+}
+/*container for summary*/
+#summary{
+  background-color: rgb(156, 210, 253);
+  border-radius: 5px;
+  border: 5px solid blue;
+  width: 270px;
+  height: 280px;
+  padding: 4px;
+  overflow: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+/*container for button restart*/
+#btnRestart{
+  text-align: center;
+  display: none;
+  position: relative;
+}
+/*button restart itself*/
+#btnRestart #restart{
+  font-size: 20px;
+  position: relative;
+}
+
+
+/*Back Color for products*/
+#btnLiters {
+  background-color: rgba(255, 255, 0, 0.685);
+}
+#btnRound{
+  background-color: rgba(255, 255, 0, 0.685);
+}
+#btnSlim{
+  background-color: rgba(255, 255, 0, 0.685);
+}
+#btnIceTube{
+  background-color: rgb(0, 153, 255);
+}
+#btnNewContainer{
+  background-color: rgb(0, 153, 255);
+}
+#btnMoneyIn{
+  background-color: rgb(166, 243, 89);
+}
+#btnMoneyOut{
+  background-color: rgb(238, 108, 134);
+}
+#btnVoid{
+  background-color: rgb(238, 108, 134);
+}
+/*Entry word for entries*/
+#lblEntryWord{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#lblEntry{
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+/**/
+#wordMoneyIn{
+  color: darkgreen;
+}
+#lblMoney-In{
+  color: darkgreen;
+}
+#wordMoneyOut{
+  color: darkred;
+}
+#lblMoney-Out{
+  color: darkred;
+}
+#wordTotal{
+  color: darkgreen;
+}
+#lblTotal{
+  font-weight: bold;
+  color: darkgreen;
+}
+
+
+/*table*/
+table tr #col1{
+  width: 150px;
+  max-width: 150px;
+  height: 10px;
+  max-height: 10px;
+}
